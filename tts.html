@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="sharebootstrap.com" />
+    <meta name="description" content="free bootstrap template by sharebootstrap.com">
+    <link rel="canonical" href="https://sharebootstrap.com" />
+    <title>TTS</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontaweome icons replacment -->
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+    <!-- Theme styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Your Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+        }
+        td {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 20px;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 20px;
+            border: 1px solid black;
+            outline: none;
+            text-transform: uppercase;
+        }
+        .clue-container {
+            margin-top: 20px;
+            text-align: left;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #congrats-img {
+            display: none;
+            margin-top: 20px;
+            width: 200px;
+        }
+
+        .submit-button, .reset-button {
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+        .reset-button {
+            background-color: red;
+        }
+        #preloader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            background: #fff url('img/loader.gif') no-repeat center center;
+        }
+        #loader {
+            display: none;
+        }
+        .numbered-input {
+            position: relative;
+        }
+        .numbered-input::before {
+            content: attr(data-number);
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            font-size: 12px;
+            color: black;
+            background-color: white;
+            padding: 2px;
+            z-index: 99;
+        }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 9998;
+        }
+        .popup-modal {
+            background: #fff;
+            border: 2px solid #000;
+            width: 300px;
+            margin: 10% auto;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 9999;
+        }
+        .popup-modal img {
+            max-width: 200px;
+            margin-bottom: 10px;
+        }
+        .popup-close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .popup-button {
+            margin: 5px auto;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3" id="mainNav">
+        <div class="container"> <a class="navbar-brand js-scroll-trigger" href="index.html">byNauffal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="index.html">Home</a> </li>
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="tts.html">Quiz</a> </li>
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="contact.html">💌</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1>Teka-Teki Silang</h1>
+    <table>
+        <!-- Row 1 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="numbered-input" data-number="1">
+                <input type="text" maxlength="1" id="m5" autocomplete="off">
+            </td>
+            <td><input type="text" maxlength="1" id="m6" autocomplete="off"></td>
+            <td class="numbered-input" data-number="4">
+                <input type="text" maxlength="1" id="m7" autocomplete="off">
+            </td>
+            <td><input type="text" maxlength="1" id="m8" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Row 2 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m20" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td class="numbered-input" data-number="5">
+                <input type="text" maxlength="1" id="m22" autocomplete="off">
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Row 3 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="numbered-input" data-number="2">
+                <input type="text" maxlength="1" id="m30" autocomplete="off">
+            </td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m33" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m36" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Row 4 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="numbered-input" data-number="2">
+                <input type="text" maxlength="1" id="m42" autocomplete="off">
+            </td>
+            <td><input type="text" maxlength="1" id="m43" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m44" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m45" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m46" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m47" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m48" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m49" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m50" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m51" autocomplete="off"></td>
+            <td></td>
+        </tr>
+        <!-- Row 5 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m56" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m59" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m62" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Row 6 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m69" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m72" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Row 7 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m82" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m85" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Row 8 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m95" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m98" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Row 9 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m108" autocomplete="off"></td>
+            <td></td>
+            <td class="numbered-input" data-number="3">
+                <input type="text" maxlength="1" id="m110" autocomplete="off">
+            </td>
+            <td><input type="text" maxlength="1" id="m111" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m112" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m113" autocomplete="off"></td>
+            <td class="numbered-input" data-number="6">
+                <input type="text" maxlength="1" id="m114" autocomplete="off">
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Row 10 -->
+        <tr>
+            <td class="numbered-input" data-number="1">
+                <input type="text" maxlength="1" id="m118" autocomplete="off">
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m124" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m127" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Row 11 -->
+        <tr>
+            <td><input type="text" maxlength="1" id="m131" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m140" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Row 12 -->
+        <tr>
+            <td class="numbered-input" data-number="4">
+                <input type="text" maxlength="1" id="m144" autocomplete="off">
+            </td>
+            <td><input type="text" maxlength="1" id="m145" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m146" autocomplete="off"></td>
+            <td class="numbered-input" data-number="3">
+                <input type="text" maxlength="1" id="m147" autocomplete="off">
+            </td>
+            <td><input type="text" maxlength="1" id="m148" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m149" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m150" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m151" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m152" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m153" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m154" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m155" autocomplete="off"></td>
+            <td><input type="text" maxlength="1" id="m156" autocomplete="off"></td>
+        </tr>
+        <!-- Row 13 -->
+        <tr>
+            <td><input type="text" maxlength="1" id="m157" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m160" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m166" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <!-- row 14 -->
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m173" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <!-- row 15 -->
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><input type="text" maxlength="1" id="m186" autocomplete="off"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    
+    <button class="submit-button" onclick="checkAnswers()">Submit</button>
+    <button class="reset-button" onclick="resetAnswers()">Reset</button>
+
+    <div id="popupOverlay" class="popup-overlay">
+        <div id="notificationPopup" class="popup-modal">
+            <img id="notificationImg" alt="Notifikasi">
+            <p id="notificationText"></p>
+            <button id="popupButton" class="popup-button" onclick="closePopup()">Oke</button>
+            <button id="klaimButton" class="popup-button" onclick="klaimHadiah()" style="display:none;">Klaim</button>
+        </div>
+    </div>
+
+    <div class="clue-container">
+        <h2>Mendatar:</h2>
+        <ol>
+            <li>Apa yang punya kaki tapi gabisa jalan?</li>
+            <li>Apa yang pas masuk kering, pas keluar basah?</li>
+            <li>Bis apa yang kalau disentuh sakit?</li>
+            <li>Masuk pelan, keluar cepat, apakah itu?</li>
+        </ol>
+        
+        <h2>Menurun:</h2>
+        <ol>
+            <li>Apa yang kalau tengkurep berisi, tapi pas dibalik kosong?</li>
+            <li>Siapa orang terganteng di dunia?</li>
+            <li>Apa yang panjang, enak, dan suka bikin kamu puas?</li>
+            <li>Apa yang sering keluar masuk lubang dan bisa bikin capek?</li>
+            <li>Binatang apa yang kakinya di kepala?</li>
+            <li>Apa yang selalu basah meskipun dibiarkan kering?</li>
+        </ol>
+    </div>
+    
+    <script>
+        const answers = {
+            "m5": "M", "m6": "E", "m7": "J", "m8": "A",
+            "m20": "A", "m22": "K",
+            "m30": "N", "m33": "R", "m36": "U",
+            "m42": "K", "m43": "A", "m44": "N", "m45": "T", "m46": "U", "m47": "N", "m48": "G", "m49": "T", "m50": "E", "m51": "H",
+            "m56": "U", "m59": "M", "m62": "U",
+            "m69": "F", "m72": "J",
+            "m82": "F", "m85": "A",
+            "m95": "A", "m98": "H",
+            "m108": "L", "m110": "B", "m111": "I", "m112": "S", "m113": "U", "m114": "L",
+            "m118": "T", "m124": "T", "m127": "I",
+            "m131": "O", "m140": "D",
+            "m144": "P", "m145": "E", "m146": "N", "m147": "S", "m148": "I", "m149": "L", "m150": "M", "m151": "E", "m152": "K", "m153": "A", "m154": "N", "m155": "I", "m156": "K",
+            "m157": "I", "m160": "A", "m166": "H",
+            "m173": "T",
+            "m186": "E"
+        };
+        
+        function checkAnswers() {
+            let allFilled = true;
+            let allCorrect = true;
+            for (let key in answers) {
+                let input = document.getElementById(key);
+                if (input.value === "") {
+                    allFilled = false;
+                    break;
+                }
+                if (input.value.toUpperCase() !== answers[key]) {
+                    allCorrect = false;
+                }
+            }
+
+            let overlay = document.getElementById("popupOverlay");
+            let popupImg = document.getElementById("notificationImg");
+            let popupText = document.getElementById("notificationText");
+            let popupBtn = document.getElementById("popupButton");
+            let klaimBtn = document.getElementById("klaimButton");
+
+            if (!allFilled) {
+                popupImg.src = "img/kosong.jpg";
+                popupText.textContent = "Isi dulu semua jawabannya kocak😑";
+                popupBtn.textContent = "Oke";
+                klaimBtn.style.display = "none";
+            } else if (!allCorrect) {
+                popupImg.src = "img/salah.jpg";
+                popupText.textContent = "Salah cimengg, coba lagii yaa🤭";
+                popupBtn.textContent = "Coba lagi";
+                klaimBtn.style.display = "none";
+            } else {
+                popupImg.src = "img/benar.jpg";
+                popupText.textContent = "Pinternya adekk, celamat ingyahh adek dapat hadiah uang sebesar 50k, tunjukan notif ini ke nauffal untuk klaim hadiahnya😘";
+                popupBtn.textContent = "Tutup";
+                klaimBtn.style.display = "inline-block";
+            }
+            overlay.style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popupOverlay").style.display = "none";
+        }
+
+        function klaimHadiah() {
+            alert("Hadiah berhasil diklaim!"); 
+            closePopup();
+        }
+
+        function resetAnswers() {
+            const inputs = document.querySelectorAll('input[type="text"]');
+            inputs.forEach(input => input.value = '');
+            document.getElementById("congrats-img").style.display = "none";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("preloader").style.display = "none";
+        });
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
+</html>
